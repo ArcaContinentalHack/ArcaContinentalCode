@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="styles/productos.css">
+</head>
+<body>  
+    <header>
+        <div class="left">
+            <a href="#"><img src="img/logos/arcalogo-removebg-preview.png" alt="Arca Logo"></a>
+        </div>
+        <div class="right">
+            <nav class="desktop-menu">
+                <a href="main.html">Inicio</a>
+                <a href="#nuestra-historia">Nuestra Historia</a>
+                <a href="productos.html">Tienda</a>
+                <a href="promociones.html">Promociones</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="login.html" class="loginBtn">Iniciar Sesión</a>
+            </nav>
+            <div class="hamburger-menu">
+                <ion-icon name="menu" onclick="toggleMenu()"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="category">
+                <h2>Coca Cola</h2>
+                <div class="product-grid">
+                    <div class="product" data-id="1">
+                        <img src="img/productos/coca-cola.png.webp" alt="Coca Cola">
+                        <p class="product-name">Coca Cola</p>
+                        <p class="product-price">509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-id="2">
+                        <img src="img/productos/ades.webp" alt="Ades">
+                        <p class="product-name">Ades</p>
+                        <p class="product-price">996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-id="3">
+                        <img src="img/productos/escapes2.avif" alt="Sprite">
+                        <p class="product-name">Sprite</p>
+                        <p class="product-price">578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+            <!-- Repite el bloque para más categorías -->
+        </main>
+    </div>
+    <script src="productos.js"></script>
+</body>
+</html>
