@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tus Intereses</title>
+    <link rel="stylesheet" href="styles/intereses.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logos/unnamed-removebg-preview.png" alt="Deezer Logo" class="logo">
+            <h1>Te damos la bienvenida</h1>
+            <p>¡Elige tus marcas más vendidas!</p>
+            <div class="search-bar-container">
+                <input type="text" placeholder="Buscar" class="search-bar">
+            </div>
+            <div class="genre-buttons">
+                <button class="genre-button">Coca-Cola</button>
+                <button class="genre-button">Fanta</button>
+                <button class="genre-button">Sprite</button>
+                <button class="genre-button">Fresca</button>
+                <button class="genre-button">Ciel agua</button>
+                <button class="genre-button">Manzana</button>
+                <button class="genre-button">Powerade moras</button>
+                <button class="genre-button">Powerade Frut</button>
+                <button class="genre-button">Del valle</button>
+                <button class="genre-button">Frutsi</button>
+            </div>
+        </header>
+        <main>
+            <div class="artist-grid">
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/coca-cola.png.webp" alt="Coca Cola">
+                    <p>Coca Cola</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/30538556-800-auto.webp" alt="Fanta">
+                    <p>Fanta</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/7225.jpg" alt="Sprite">
+                    <p>Sprite</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/00750105530378L.jpg.webp" alt="Fresca">
+                    <p>Fresca</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/powerademoras.webp" alt="Powerade Moras">
+                    <p>Powerade Moras</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/poweradefrut.jpg.webp" alt="Powerade Frut">
+                    <p>Powerade Frut</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/agua.jpeg" alt="Agua Ciel">
+                    <p>Agua Ciel</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/31196210-800-auto.webp" alt="Nuevo Producto">
+                    <p>Ciel Mineralizada</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/00750105530379L.jpg.webp" alt="Nuevo Producto">
+                    <p>Manzana lift</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/00750105533998L.jpg.webp" alt="Nuevo Producto">
+                    <p>Sidral mundet</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <button class="submit-button" disabled>Elige al menos 1 marca</button>
+        </footer>
+    </div>
+    <script src="intereses.js"></script>
+</body>
+</html>
