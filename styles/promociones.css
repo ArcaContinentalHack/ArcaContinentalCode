@@ -10,15 +10,22 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: black;
+    background-color: white; /* Asegúrate de que el header tenga un fondo visible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
+    top: 0;
+    left: 0; /* Asegúrate de que el header esté alineado a la izquierda */
     width: 100%;
     z-index: 1000;
 }
 
+header a {
+    font-size: 16px;
+}
+
 header img {
     margin: 10px;
-    height: 100px;
+    height: 100px; /* Ajusta la altura de la imagen si es necesario */
 }
 
 header .right {
@@ -31,13 +38,39 @@ header .right {
 }
 
 .right a {
-    color: seashell;
+    color: #333; /* Color del texto en el menú */
     text-decoration: none;
     margin: 0 10px;
 }
 
 .right a:hover {
     color: #E71D2A;
+    text-decoration: none;
+}
+
+.right ion-icon {
+    color: #333 !important;
+    font-size: 18px;
+}
+
+.right ion-icon:hover {
+    color: #E71D2A !important;
+}
+
+.loginBtn {
+    background-color: #E71D2A;
+    border-radius: 34px;
+    padding: 10px 20px; 
+    color: white !important; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    text-align: center; 
+}
+
+.loginBtn:hover {
+    background-color: white;
+    color: #333 !important;
     text-decoration: none;
 }
 

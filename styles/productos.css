@@ -17,6 +17,7 @@ body {
     margin-top: 69px; /* Espacio para el header fijo */
 }
 
+
 header {
     height: 69px;
     display: flex;
@@ -32,9 +33,13 @@ header {
     z-index: 1000;
 }
 
+header a {
+    font-size: 16px;
+}
+
 header img {
     margin: 10px;
-    height: 50px; /* Ajusta la altura de la imagen si es necesario */
+    height: 100px; /* Ajusta la altura de la imagen si es necesario */
 }
 
 header .right {
@@ -58,11 +63,37 @@ header .right {
 }
 
 .right ion-icon {
-    color: #333;
+    color: #333 !important;
     font-size: 18px;
 }
 
-right ion-icon:hover {
+.right ion-icon:hover {
+    color: #E71D2A !important;
+}
+
+.loginBtn {
+    background-color: #E71D2A;
+    border-radius: 34px;
+    padding: 10px 20px; 
+    color: white !important; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    text-align: center; 
+}
+
+.loginBtn:hover {
+    background-color: white;
+    color: #333 !important;
+    text-decoration: none;
+}
+
+.right ion-icon {
+    color: seashell;
+    font-size: 18px;
+}
+
+.right ion-icon:hover {
     color: #E71D2A;
 }
 

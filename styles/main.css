@@ -8,8 +8,8 @@
 }
 
 body {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -17,55 +17,63 @@ html {
 }
 
 header {
-height: 69px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 20px;
-background-color: black;
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white; /* Asegúrate de que el header tenga un fondo visible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0; /* Asegúrate de que el header esté alineado a la izquierda */
+    width: 100%;
+    z-index: 1000;
 }
 
 header a {
     font-size: 16px;
 }
 
-
 header img {
-margin: 10px;
-height: 100px;
+    margin: 10px;
+    height: 100px; /* Ajusta la altura de la imagen si es necesario */
 }
 
 header .right {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.right a
-{
-color: white;
+.right {
+    margin-right: 50px;
 }
 
-.right a
-{
-color: seashell;
-text-decoration: none;
-margin: 0 10px;
+.right a {
+    color: #333; /* Color del texto en el menú */
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 .right a:hover {
     color: #E71D2A;
+    text-decoration: none;
 }
 
-.right ion-icon
-{
-color: seashell;
+.right ion-icon {
+    color: #333;
+    font-size: 18px;
+}
+
+right ion-icon:hover {
+    color: #E71D2A;
 }
 
 .loginBtn {
     background-color: #E71D2A;
     border-radius: 34px;
     padding: 10px 20px; 
-    color: white; 
+    color: white !important; 
     text-decoration: none; 
     display: inline-block; 
     font-size: 16px; 
@@ -73,110 +81,109 @@ color: seashell;
 }
 
 .loginBtn:hover {
-    background-color: seashell;
-    color: #E71D2A;
+    background-color: white;
+    color: #333 !important;
     text-decoration: none;
 }
 
-
 .first-section {
-position: relative;
-height: 720px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-image: url('../img/productos/coca-cola-caps.jpeg');
-background-size: cover;
-background-position: center;
-text-align: center;
+    position: relative;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/productos/coca-cola-caps.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top: 69px; /* Ajuste del margen superior para evitar que la primera sección quede oculta detrás del header */
 }
 
 .first-section::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: black;
-opacity: 0.4;
-z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
 }
 
 .first-section h2 {
-font-size: 48px;
-padding-bottom: 20px;
-color: white;
-background-color: transparent !important;
-z-index: 2;
-position: relative;
+    font-size: 48px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: transparent !important;
+    z-index: 2;
+    position: relative;
 }
 
 .first-section .first {
-display: flex;
-flex-direction: column;
-align-items: center;
-z-index: 2;
-position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    position: relative;
 }
 
 .first-section .first-link {
-display: inline-block;
-background-color: black;
-padding: 10px 20px;
-border-radius: 5px;
-text-align: center;
+    display: inline-block;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .first-section .first-link h4 {
-color: white;
-font-size: 14px;
-margin: 0;
+    color: white;
+    font-size: 14px;
+    margin: 0;
 }
 
 .first a {
-text-decoration: none;
+    text-decoration: none;
 }
 
-.first-section .first-link h4
-{
-color: seashell;
+.first-section .first-link h4 {
+    color: seashell;
 }
 
 .hamburger-menu {
-display: none;
+    display: none;
 }
 
 .mobile-menu {
-display: none;
-flex-direction: column;
-align-items: center;
-background-color: black;
-padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
 }
 
 .mobile-menu a {
-color: #E71D2A;
-text-decoration: none;
-margin: 10px 0;
+    color: #E71D2A;
+    text-decoration: none;
+    margin: 10px 0;
 }
 
 @media (max-width: 768px) {
-.desktop-menu {
-display: none;
-}
+    .desktop-menu {
+        display: none;
+    }
 
-.hamburger-menu {
-    display: block;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-}
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
 
-.mobile-menu.active {
-    display: flex;
-}
+    .mobile-menu.active {
+        display: flex;
+    }
 }
 
 /* ===================== Impulsa tu Negocio ===================== */
