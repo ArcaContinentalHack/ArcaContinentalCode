@@ -2,28 +2,36 @@ function addToCart(event, button) {
     event.stopPropagation(); // Evita que el evento de clic se propague al contenedor del producto
     const productElement = button.closest('.product');
     const product = {
-        id: productElement.getAttribute('data-id'),
-        name: productElement.querySelector('.product-name').textContent,
-        price: parseFloat(productElement.querySelector('.product-price').textContent),
-        volume: productElement.querySelector('.product-volume').textContent,
         image: productElement.querySelector('img').src,
-        quantity: 1
+        name: productElement.querySelector('.product-name').textContent,
+        price: productElement.querySelector('.product-price').textContent,
+        volume: productElement.querySelector('.product-volume').textContent
     };
 
-    // Obtener el carrito actual desde localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Verificar si el producto ya está en el carrito
-    const existingProduct = cart.find(item => item.id === product.id);
-    if (existingProduct) {
-        existingProduct.quantity++;
-    } else {
-        cart.push(product);
-    }
-
-    // Guardar el carrito actualizado en localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Redirigir a la página del carrito con el producto seleccionado
     window.location.href = 'shopping.html';
+}
+
+function toggleSelection(productElement) {
+    productElement.classList.toggle('selected');
+    updateSubmitButton();
+}
+
+function updateSubmitButton() {
+    const selectedProducts = document.querySelectorAll('.product.selected').length;
+    const submitButton = document.querySelector('.submit-button');
+
+    if (selectedProducts >= 1) {
+        submitButton.textContent = 'Continuar';
+        submitButton.style.backgroundColor = '#e71d2a';
+        submitButton.style.cursor = 'pointer';
+        submitButton.disabled = false;
+    } else {
+        submitButton.textContent = 'Elige al menos 1 marca';
+        submitButton.style.backgroundColor = '#ccc';
+        submitButton.style.cursor = 'not-allowed';
+        submitButton.disabled = true;
+    }
 }

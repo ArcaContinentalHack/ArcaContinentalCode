@@ -9,15 +9,15 @@
 <body>
     <header>
         <div class="left">
-            <a href="main.html"><img src="img/logos/arcalogo-removebg-preview.png" alt="Arca Logo"></a>
+            <a href="main.html"><img src="img/logos/coca-cola-logo.webp" alt="Logo"></a>
         </div>
         <div class="right">
             <nav>
                 <a href="main.html">Inicio</a>
-                <a href="productos.html">Tienda</a>
-                <a href="promociones.html">Promociones</a>
-                <a href="main.html#contacto">Contacto</a>
-                <a href="login.html" class="loginBtn">Iniciar Sesión</a>
+                <a href="#tienda">Tienda</a>
+                <a href="#promociones">Promociones</a>
+                <a href="#contacto">Contacto</a>
+                <a href="shopping.html"><ion-icon name="cart"></ion-icon></a>
             </nav>
         </div>
     </header>
@@ -25,61 +25,37 @@
     <main>
         <h1>Shopping Cart</h1>
 
-        <div class="shopping-cart-container">
-            <div class="shopping-cart">
-                <div class="column-labels">
-                    <label class="product-image">Image</label>
-                    <label class="product-details">Product</label>
-                    <label class="product-price">Price</label>
-                    <label class="product-quantity">Quantity</label>
-                    <label class="product-removal">Remove</label>
-                    <label class="product-line-price">Total</label>
-                </div>
-
-                <!-- Placeholder for dynamically added products -->
-                <template class="product-template">
-                    <div class="product" data-id="">
-                        <div class="product-image">
-                            <img src="" alt="">
-                        </div>
-                        <div class="product-details">
-                            <div class="product-title"></div>
-                            <p class="product-description"></p>
-                        </div>
-                        <div class="product-price"></div>
-                        <div class="product-quantity">
-                            <input type="number" value="1" min="1">
-                        </div>
-                        <div class="product-removal">
-                            <button class="remove-product">
-                                Remove
-                            </button>
-                        </div>
-                        <div class="product-line-price"></div>
-                    </div>
-                </template>
-            </div>
-
-            <div class="totals">
-                <div class="totals-item">
-                    <label>Subtotal</label>
-                    <div class="totals-value" id="cart-subtotal">0.00</div>
-                </div>
-                <div class="totals-item">
-                    <label>Tax (5%)</label>
-                    <div class="totals-value" id="cart-tax">0.00</div>
-                </div>
-                <div class="totals-item">
-                    <label>Shipping</label>
-                    <div class="totals-value" id="cart-shipping">0.00</div>
-                </div>
-                <div class="totals-item totals-item-total">
-                    <label>Grand Total</label>
-                    <div class="totals-value" id="cart-total">0.00</div>
-                </div>
-                <button class="checkout">Checkout</button>
+        <div class="shopping-cart">
+            <div class="column-labels">
+                <label class="product-image">Image</label>
+                <label class="product-details">Product</label>
+                <label class="product-price">Price</label>
+                <label class="product-quantity">Quantity</label>
+                <label class="product-removal">Remove</label>
+                <label class="product-line-price">Total</label>
             </div>
         </div>
+
+        <div class="totals">
+            <div class="totals-item">
+                <label>Subtotal</label>
+                <div class="totals-value" id="cart-subtotal">0</div>
+            </div>
+            <div class="totals-item">
+                <label>Tax (5%)</label>
+                <div class="totals-value" id="cart-tax">0</div>
+            </div>
+            <div class="totals-item">
+                <label>Shipping</label>
+                <div class="totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+                <label>Grand Total</label>
+                <div class="totals-value" id="cart-total">0</div>
+            </div>
+        </div>
+            
+        <button class="checkout">Checkout</button>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

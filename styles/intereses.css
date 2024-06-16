@@ -81,7 +81,7 @@ header {
 
 .artist.selected img {
     filter: brightness(0.5);
-    border: 2px solid #713926;
+    border: 2px solid #e71d2a;
 }
 
 .artist:hover {

@@ -17,7 +17,6 @@ body {
     margin-top: 69px; /* Espacio para el header fijo */
 }
 
-
 header {
     height: 69px;
     display: flex;
@@ -33,13 +32,9 @@ header {
     z-index: 1000;
 }
 
-header a {
-    font-size: 16px;
-}
-
 header img {
     margin: 10px;
-    height: 100px; /* Ajusta la altura de la imagen si es necesario */
+    height: 50px; /* Ajusta la altura de la imagen si es necesario */
 }
 
 header .right {
@@ -63,37 +58,11 @@ header .right {
 }
 
 .right ion-icon {
-    color: #333 !important;
+    color: #333;
     font-size: 18px;
 }
 
-.right ion-icon:hover {
-    color: #E71D2A !important;
-}
-
-.loginBtn {
-    background-color: #E71D2A;
-    border-radius: 34px;
-    padding: 10px 20px; 
-    color: white !important; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    text-align: center; 
-}
-
-.loginBtn:hover {
-    background-color: white;
-    color: #333 !important;
-    text-decoration: none;
-}
-
-.right ion-icon {
-    color: seashell;
-    font-size: 18px;
-}
-
-.right ion-icon:hover {
+right ion-icon:hover {
     color: #E71D2A;
 }
 
@@ -104,18 +73,19 @@ main {
 
 .category {
     margin-bottom: 40px;
+    padding-left: 20px; /* Ajusta el padding-left para alinear con el contenido */
 }
 
 .category h2 {
     text-align: left;
     margin-bottom: 20px;
-    margin-left: 10px;
+    padding-left: -20px; /* Mueve el título más a la izquierda */
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    gap: 80px; /* Aumenta la distancia entre cada ítem */
     justify-items: center;
 }
 
@@ -127,13 +97,14 @@ main {
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
     position: relative;
+    width: 200px; /* Ajusta el ancho del producto */
 }
 
 .product img {
-    width: 100px;
-    height: 100px;
+    width: 150px; /* Ajusta el ancho de la imagen */
+    height: 150px; /* Ajusta la altura de la imagen */
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="styles/productos.css">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>  
     <header>
@@ -15,37 +14,241 @@
         <div class="right">
             <nav class="desktop-menu">
                 <a href="main.html">Inicio</a>
+                <a href="#nuestra-historia">Nuestra Historia</a>
                 <a href="productos.html">Tienda</a>
                 <a href="promociones.html">Promociones</a>
-                <a href="main.html#contacto">Contacto</a>
-                <a href="shopping.html"><ion-icon name="cart"></ion-icon></a>
+                <a href="contacto.html">Contacto</a>
                 <a href="login.html" class="loginBtn">Iniciar Sesión</a>
             </nav>
+            <div class="hamburger-menu">
+                <ion-icon name="menu" onclick="toggleMenu()"></ion-icon>
+            </div>
         </div>
     </header>
     <div class="container">
         <main>
             <div class="category">
-                <h2>Coca Cola</h2>
+                <h2>Refrescos</h2>
                 <div class="product-grid">
-                    <div class="product" data-id="1">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
                         <img src="img/productos/coca-cola.png.webp" alt="Coca Cola">
                         <p class="product-name">Coca Cola</p>
-                        <p class="product-price">509.24</p>
+                        <p class="product-price">$509.24</p>
                         <p class="product-volume">(0.68/ml)</p>
                         <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
                     </div>
-                    <div class="product" data-id="2">
-                        <img src="img/productos/ades.webp" alt="Ades">
-                        <p class="product-name">Ades</p>
-                        <p class="product-price">996.44</p>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/Fanta.webp" alt="Fanta">
+                        <p class="product-name">Fanta</p>
+                        <p class="product-price">$996.44</p>
                         <p class="product-volume">(1.33/ml)</p>
                         <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
                     </div>
-                    <div class="product" data-id="3">
-                        <img src="img/productos/escapes2.avif" alt="Sprite">
-                        <p class="product-name">Sprite</p>
-                        <p class="product-price">578.84</p>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/Fresca.jpg.webp" alt="Sprite">
+                        <p class="product-name">Fresca</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Bebidas Energéticas</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/powerademoras.webp" alt="Coca Cola">
+                        <p class="product-name">Powerade Moras</p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/30691424-800-auto.webp" alt="Fanta">
+                        <p class="product-name">Powerade Lima</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/frut.webp" alt="Sprite">
+                        <p class="product-name">Powerade Frut</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+
+            <div class="category">
+                <h2>Cafés</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/black.webp" alt="Coca Cola">
+                        <p class="product-name">Cafe Black</p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/escapes2.avif" alt="Fanta">
+                        <p class="product-name">Escapes</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/illy.webp" alt="Sprite">
+                        <p class="product-name">Illy</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+
+            <div class="category">
+                <h2>Jugos y Bebidas de Frutas</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/valledurazno.webp" alt="Coca Cola">
+                        <p class="product-name">Del Valle Durazno</p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/delpiña.webp" alt="Fanta">
+                        <p class="product-name">Del Valle Piña</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/delvallmanz.webp" alt="Sprite">
+                        <p class="product-name">Del Valle Manzana</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+
+            <div class="category">
+                <h2>Aguas</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/cielmineralizada.webp" alt="Coca Cola">
+                        <p class="product-name">Ciel Mineralizada/p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/cieljamainca.png" alt="Fanta">
+                        <p class="product-name">Ciel Jamaica</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/cielnaranja.webp" alt="Sprite">
+                        <p class="product-name">Ciel Naranja</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Tés</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/fuzeteanegro.webp" alt="Coca Cola">
+                        <p class="product-name">Fuze Tea Negro </p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/fuzeteadurazno.webp" alt="Fanta">
+                        <p class="product-name">Fuze Tea Durazno</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/fuzetealight.webp" alt="Sprite">
+                        <p class="product-name">Fuze Tea Light</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+
+            <div class="category">
+                <h2>Productos Lácteos</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/lecheenteraa.webp" alt="Coca Cola">
+                        <p class="product-name">SCL Leche Entero</p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/lechelight.jpeg" alt="Fanta">
+                        <p class="product-name">SCL Leche Light</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/lechedeslactosada.jpeg" alt="Sprite">
+                        <p class="product-name">SCL Leche Deslac</p>
+                        <p class="product-price">$578.84</p>
+                        <p class="product-volume">(0.61/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <!-- Agrega más productos según sea necesario -->
+                </div>
+            </div>
+
+
+            <div class="category">
+                <h2>Bebidas para Niños</h2>
+                <div class="product-grid">
+                    <div class="product" data-product="Tequila Hacienda de Tepa Cristalino">
+                        <img src="img/productos/frutsinaranja.webp" alt="Coca Cola">
+                        <p class="product-name">Frutsi Naranja</p>
+                        <p class="product-price">$509.24</p>
+                        <p class="product-volume">(0.68/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Patrón Tequila Reposado 100% Agave">
+                        <img src="img/productos/frutsiuva.webp" alt="Fanta">
+                        <p class="product-name">Frutsi Uva</p>
+                        <p class="product-price">$996.44</p>
+                        <p class="product-volume">(1.33/ml)</p>
+                        <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
+                    </div>
+                    <div class="product" data-product="Antiguo de Herradura Tequila Reposado">
+                        <img src="img/productos/frutsifrut.webp" alt="Sprite">
+                        <p class="product-name">Frutsi Frutas</p>
+                        <p class="product-price">$578.84</p>
                         <p class="product-volume">(0.61/ml)</p>
                         <button class="buy-button" onclick="addToCart(event, this)">Comprar</button>
                     </div>

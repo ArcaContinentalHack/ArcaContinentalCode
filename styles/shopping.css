@@ -1,5 +1,6 @@
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
     color: #333;
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@
 
 body {
     padding: 0 30px 30px 20px;
+    font-weight: 100;
 }
 
 header {
@@ -16,22 +18,17 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: white; /* Asegúrate de que el header tenga un fondo visible */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: black;
     position: fixed;
     top: 0;
-    left: 0; /* Asegúrate de que el header esté alineado a la izquierda */
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
 
-header a {
-    font-size: 16px;
-}
-
 header img {
     margin: 10px;
-    height: 100px; /* Ajusta la altura de la imagen si es necesario */
+    height: 100px;
 }
 
 header .right {
@@ -44,7 +41,7 @@ header .right {
 }
 
 .right a {
-    color: #333; /* Color del texto en el menú */
+    color: seashell;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -55,29 +52,12 @@ header .right {
 }
 
 .right ion-icon {
-    color: #333 !important;
+    color: seashell;
     font-size: 18px;
 }
 
 .right ion-icon:hover {
-    color: #E71D2A !important;
-}
-
-.loginBtn {
-    background-color: #E71D2A;
-    border-radius: 34px;
-    padding: 10px 20px; 
-    color: white !important; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    text-align: center; 
-}
-
-.loginBtn:hover {
-    background-color: white;
-    color: #333 !important;
-    text-decoration: none;
+    color: #E71D2A;
 }
 
 h1 {
@@ -91,14 +71,8 @@ label {
     color: #aaa;
 }
 
-.shopping-cart-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px; /* Adjusted margin-top to create space for the fixed header */
-}
-
 .shopping-cart {
-    flex: 1;
+    margin-top: 20px; /* Adjusted margin-top to create space for the fixed header */
 }
 
 .column-labels {
@@ -139,7 +113,7 @@ label {
 
 .product-title {
     margin-right: 20px;
-    font-family: Helvetica, sans-serif;
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 }
 
 .product-description {
@@ -171,7 +145,7 @@ label {
     padding: 4px 8px;
     background-color: #E71D2A;
     color: #fff;
-    font-family: Helvetica, sans-serif;
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
     font-size: 12px;
     border-radius: 3px;
 }
@@ -185,13 +159,8 @@ label {
     text-align: center;
 }
 
-.totals {
-    margin-top: 30px;
-    flex-shrink: 0; /* Ensure totals don't shrink */
-    text-align: right; /* Align totals to the right */
-}
-
 .totals .totals-item {
+    float: right;
     clear: both;
     width: 100%;
     margin-bottom: 10px;
@@ -211,10 +180,11 @@ label {
 }
 
 .totals .totals-item-total {
-    font-family: Helvetica, sans-serif;
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 }
 
 .checkout {
+    float: right;
     border: 0;
     margin-top: 20px;
     padding: 6px 25px;
@@ -222,8 +192,6 @@ label {
     color: #fff;
     font-size: 25px;
     border-radius: 3px;
-    display: block;
-    margin-left: auto; /* Align button to the right */
 }
 
 .checkout:hover {

@@ -30,7 +30,6 @@ body{
 
 .container p{
     font-size: 14px;
-    line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
@@ -187,7 +186,7 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Centramos el contenido entre el top y bottom */
     flex-direction: column;
     padding: 0 30px;
     text-align: center;
@@ -209,7 +208,48 @@ body{
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+.toggle-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 40px; /* Ajuste de padding para dejar espacio en el fondo */
+}
+
+.toggle-right h1 {
+    margin-bottom: 0px; /* Añadir margen inferior de 5px */
+}
+
+.toggle-right p:first-of-type {
+    margin-top: 0; /* Eliminar margen superior */
+    margin-bottom: 20px; /* Ajustar margen inferior según sea necesario */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-right p {
+    margin: 10px 0;
+}
+
+.primer p {
+    margin-top: 0; /* Eliminar margen superior */
+    padding-top: 0px;
+
+}
+.contact-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaciado entre los números de teléfono */
+    margin-top: auto; /* Empuja los números de contacto hacia el fondo */
+}
+
+.contact-numbers p {
+    margin: 0;
+}
+
+.container.active .toggle-right {
     transform: translateX(200%);
 }
 
@@ -224,7 +264,7 @@ body{
     z-index: 1000;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeOut 2s 2s forwards; /* Desaparece despuÃ©s de 2 segundos */
+    animation: fadeOut 2s 2s forwards; /* Desaparece después de 2 segundos */
 }
 
 .error-message {
@@ -238,7 +278,7 @@ body{
     z-index: 1000;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeOut 2s 2s forwards; /* Desaparece despuÃ©s de 2 segundos */
+    animation: fadeOut 2s 2s forwards; /* Desaparece después de 2 segundos */
 }
 
 @keyframes fadeOut {
@@ -248,7 +288,7 @@ body{
     }
 }
 
-/* Estilo para el Ã­cono de mostrar/ocultar contraseÃ±a */
+/* Estilo para el ícono de mostrar/ocultar contraseña */
 .toggle-password {
     cursor: pointer;
     position: absolute;
@@ -257,19 +297,19 @@ body{
     transform: translateY(-50%);
   }
   
-  /* AsegÃºrate de ajustar el padding del input para hacer espacio para el Ã­cono */
+  /* Asegúrate de ajustar el padding del input para hacer espacio para el ícono */
   input[type="password"] {
-    padding-right: 40px; /* Ajustar segÃºn sea necesario */
+    padding-right: 40px; /* Ajustar según sea necesario */
   }
 
 /* Estilo para el logo */
 .arca-header .arca-logo {
-    height: 200px; /* Ajustar el tamaÃ±o del logo */
+    height: 200px; /* Ajustar el tamaño del logo */
     margin-left: 10px; /* Espaciado a la izquierda */
 }
 
 /* Estilo para el logo en el formulario */
 .amazon-logo {
-    height: 200px; /* Ajusta este valor segÃºn el tamaÃ±o deseado */
-    margin-bottom: px; /* AÃ±adir espacio debajo de la imagen si es necesario */
+    height: 200px; /* Ajusta este valor según el tamaño deseado */
+    margin-bottom: px; /* Añadir espacio debajo de la imagen si es necesario */
 }
