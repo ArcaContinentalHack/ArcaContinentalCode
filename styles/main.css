@@ -40,22 +40,39 @@ align-items: center;
 color: white;
 }
 
-.right a {
-color: #E71D2A;
-text-decoration: none;
-margin: 0 10px;
-}
-
 .right a
 {
 color: seashell;
 text-decoration: none;
+margin: 0 10px;
+}
+
+.right a:hover {
+    color: #E71D2A;
 }
 
 .right ion-icon
 {
 color: seashell;
 }
+
+.loginBtn {
+    background-color: #E71D2A;
+    border-radius: 34px;
+    padding: 10px 20px; 
+    color: white; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    text-align: center; 
+}
+
+.loginBtn:hover {
+    background-color: seashell;
+    color: #E71D2A;
+    text-decoration: none;
+}
+
 
 .first-section {
 position: relative;
