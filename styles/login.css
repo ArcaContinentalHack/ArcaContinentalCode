@@ -9,7 +9,7 @@
 
 body{
     background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #333f47);
+    background: linear-gradient(to right, rgb(147, 143, 143), #f5f5f5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,9 +23,9 @@ body{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 550px;
+    width: 1000px;
+    max-width: 300%;
+    min-height: 700px;
 }
 
 .container p{
@@ -35,19 +35,23 @@ body{
     margin: 20px 0;
 }
 
+.form-container {
+    color: #c52c40;
+}
+
 .container span{
     font-size: 12px;
 }
 
 .container a{
-    color: #333;
+    color: black;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
 .container button{
-    background-color: #1B242A;
+    background-color: #c52c40;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -161,9 +165,9 @@ body{
 }
 
 .toggle{
-    background-color:#1B242A;
+    background-color: #713926;
     height: 100%;
-    background: #1B242A;
+    background: #c52c40;        /* Color Acceso*/
     color: #fff;
     position: relative;
     left: -100%;
@@ -220,7 +224,7 @@ body{
     z-index: 1000;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeOut 2s 2s forwards; /* Desaparece después de 2 segundos */
+    animation: fadeOut 2s 2s forwards; /* Desaparece despuÃ©s de 2 segundos */
 }
 
 .error-message {
@@ -228,13 +232,13 @@ body{
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f44336; /* Red */
+    background-color: #e71d2a; /* Red */
     color: white;
     padding: 16px;
     z-index: 1000;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeOut 2s 2s forwards; /* Desaparece después de 2 segundos */
+    animation: fadeOut 2s 2s forwards; /* Desaparece despuÃ©s de 2 segundos */
 }
 
 @keyframes fadeOut {
@@ -244,7 +248,7 @@ body{
     }
 }
 
-/* Estilo para el ícono de mostrar/ocultar contraseña */
+/* Estilo para el Ã­cono de mostrar/ocultar contraseÃ±a */
 .toggle-password {
     cursor: pointer;
     position: absolute;
@@ -253,7 +257,19 @@ body{
     transform: translateY(-50%);
   }
   
-  /* Asegúrate de ajustar el padding del input para hacer espacio para el ícono */
+  /* AsegÃºrate de ajustar el padding del input para hacer espacio para el Ã­cono */
   input[type="password"] {
-    padding-right: 40px; /* Ajustar según sea necesario */
+    padding-right: 40px; /* Ajustar segÃºn sea necesario */
   }
+
+/* Estilo para el logo */
+.arca-header .arca-logo {
+    height: 200px; /* Ajustar el tamaÃ±o del logo */
+    margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+/* Estilo para el logo en el formulario */
+.amazon-logo {
+    height: 200px; /* Ajusta este valor segÃºn el tamaÃ±o deseado */
+    margin-bottom: px; /* AÃ±adir espacio debajo de la imagen si es necesario */
+}

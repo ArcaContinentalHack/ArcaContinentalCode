@@ -1,70 +1,98 @@
-/* Set rates + misc */
-var taxRate = 0.05;
-var shippingRate = 15.00; 
-var fadeTime = 300;
-
-/* Assign actions */
-$('.product-quantity input').change(function() {
-    updateQuantity(this);
+document.addEventListener('DOMContentLoaded', function() {
+    loadCart();
+    assignEventHandlers();
 });
 
-$('.product-removal button').click(function() {
-    removeItem(this);
-});
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.querySelector('.shopping-cart');
+    const productTemplate = document.querySelector('.product-template').content;
 
-/* Recalculate cart */
-function recalculateCart() {
-    var subtotal = 0;
+    cart.forEach(item => {
+        let productElement = productTemplate.cloneNode(true);
+        productElement.querySelector('.product-image img').src = item.image;
+        productElement.querySelector('.product-title').textContent = item.name;
+        productElement.querySelector('.product-description').textContent = item.volume;
+        productElement.querySelector('.product-price').textContent = item.price.toFixed(2);
+        productElement.querySelector('.product-quantity input').value = item.quantity;
+        productElement.querySelector('.product-line-price').textContent = (item.price * item.quantity).toFixed(2);
 
-    /* Sum up row totals */
-    $('.product').each(function () {
-        subtotal += parseFloat($(this).children('.product-line-price').text());
-    });
-
-    /* Calculate totals */
-    var tax = subtotal * taxRate;
-    var shipping = (subtotal > 0 ? shippingRate : 0);
-    var total = subtotal + tax + shipping;
-
-    /* Update totals display */
-    $('.totals-value').fadeOut(fadeTime, function() {
-        $('#cart-subtotal').html(subtotal.toFixed(2));
-        $('#cart-tax').html(tax.toFixed(2));
-        $('#cart-shipping').html(shipping.toFixed(2));
-        $('#cart-total').html(total.toFixed(2));
-        if(total == 0){
-            $('.checkout').fadeOut(fadeTime);
-        } else {
-            $('.checkout').fadeIn(fadeTime);
-        }
-        $('.totals-value').fadeIn(fadeTime);
-    });
-}
-
-/* Update quantity */
-function updateQuantity(quantityInput) {
-    /* Calculate line price */
-    var productRow = $(quantityInput).parent().parent();
-    var price = parseFloat(productRow.children('.product-price').text());
-    var quantity = $(quantityInput).val();
-    var linePrice = price * quantity;
-
-    /* Update line price display and recalc cart totals */
-    productRow.children('.product-line-price').each(function () {
-        $(this).fadeOut(fadeTime, function() {
-            $(this).text(linePrice.toFixed(2));
-            recalculateCart();
-            $(this).fadeIn(fadeTime);
+        productElement.querySelector('.remove-product').addEventListener('click', function() {
+            removeItem(this, item.id);
         });
-    });  
+        productElement.querySelector('.product-quantity input').addEventListener('change', function() {
+            updateQuantity(this, item.id);
+        });
+
+        cartContainer.appendChild(productElement);
+    });
+
+    recalculateCart();
 }
 
-/* Remove item from cart */
-function removeItem(removeButton) {
-    /* Remove row from DOM and recalc cart total */
-    var productRow = $(removeButton).parent().parent();
-    productRow.slideUp(fadeTime, function() {
-        productRow.remove();
+function updateQuantity(quantityInput, productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = cart.find(item => item.id === productId);
+    if (product) {
+        product.quantity = parseInt(quantityInput.value);
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Update line price in the UI
+        const productRow = quantityInput.closest('.product');
+        const linePriceElement = productRow.querySelector('.product-line-price');
+        linePriceElement.textContent = (product.price * product.quantity).toFixed(2);
+
+        // Recalculate cart totals
         recalculateCart();
+    }
+}
+
+function removeItem(removeButton, productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    removeButton.closest('.product').remove();
+    recalculateCart();
+}
+
+function recalculateCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+    });
+
+    let taxRate = 0.05;
+    let shippingRate = 15.00;
+    let tax = subtotal * taxRate;
+    let shipping = (subtotal > 0 ? shippingRate : 0);
+    let total = subtotal + tax + shipping;
+
+    document.getElementById('cart-subtotal').textContent = subtotal.toFixed(2);
+    document.getElementById('cart-tax').textContent = tax.toFixed(2);
+    document.getElementById('cart-shipping').textContent = shipping.toFixed(2);
+    document.getElementById('cart-total').textContent = total.toFixed(2);
+
+    if (total === 0) {
+        document.querySelector('.checkout').style.display = 'none';
+    } else {
+        document.querySelector('.checkout').style.display = 'block';
+    }
+}
+
+function assignEventHandlers() {
+    document.querySelectorAll('.product-quantity input').forEach(input => {
+        input.addEventListener('change', function() {
+            const productId = this.closest('.product').dataset.id;
+            updateQuantity(this, productId);
+        });
+    });
+
+    document.querySelectorAll('.remove-product').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.closest('.product').dataset.id;
+            removeItem(this, productId);
+        });
     });
 }
