@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
             <a href="#"><img src="img/logos/coca-cola-logo.webp" alt=""></a>
         </div>
         <div class="right">
-            <nav>
+            <nav class="desktop-menu">
                 <a href="#inicio">Inicio</a>
                 <a href="#nuestra-historia">Nuestra Historia</a>
                 <a href="#tienda">Tienda</a>
@@ -22,8 +22,20 @@
                 <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
                 <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
             </nav>
+            <div class="hamburger-menu">
+                <ion-icon name="menu" onclick="toggleMenu()"></ion-icon>
+            </div>
         </div>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#nuestra-historia">Nuestra Historia</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+    </div>
     <section class="first-section">
         <h2>Coca-Cola</h2>
         <div class="first">
@@ -32,11 +44,125 @@
             </a>
         </div>
     </section>
-    <section class="">
+    <!-- ======================= "Impulsa tu Negocio" SECTION ================== -->
+    <section class="grow-business">
+        <div class="container">
+            <h2>Todo lo que necesitas para impulsar tu negocio</h2>
+            <p>Redefiniendo el proceso de promociones y precios para ayudarte a alcanzar el éxito en el menor tiempo posible</p>
+            <div class="features">
+                <div class="feature">
+                    <ion-icon name="briefcase" class="icon"></ion-icon>
+                    <h3>AC Digital</h3>
+                    <p>AC Digital es el método principal para la toma de pedido con el 51% del volumen de ventas del canal tradicional.</p>
+                </div>
+                <div class="feature">
+                    <ion-icon name="people" class="icon"></ion-icon>
+                    <h3>Clientes Registrados</h3>
+                    <p>722 mil clientes registrados (82%), 67% con compradores activos mensualmente.</p>
+                </div>
+                <div class="feature">
+                    <ion-icon name="chatbubbles" class="icon"></ion-icon>
+                    <h3>WhatsApp</h3>
+                    <p>WhatsApp es un método complementario para la toma de pedido y para el envío de comunicación digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ======================= "Nuestras Marcas" SECTION ================== -->
+    <section class="brands" id="sponsors"> 
+        <div class="s-container">
+            <h2>Nuestras Marcas</h2>
+            <div class="row-sponsors">
+                <div class="sponsor1">
+                    <img src="img/logos/coca-cola-logo.webp">
+                </div>
 
-    </section>      
+                <div class="sponsor2">
+                    <img src="img/logos/arcaContinentalLogo.png">
+                </div>
+
+                <div class="sponsor2">
+                    <img src="img/logos/coca-cola-logo.webp">
+                </div>
+
+                <div class="sponsor3">
+                    <img src="img/logos/arcaContinentalLogo.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="responsive-container-block big-container">
+            <div class="responsive-container-block bg">
+              <p class="text-blk title">
+                Testimonios
+              </p>
+              <p class="text-blk desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit massa ante viverra non maecenas. Faucibus amet quis duis egestas.
+              </p>
+              <div class="responsive-container-block blocks">
+                <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content">
+                  <p class="text-blk info-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus elementum magna ut duis pulvinar tincidunt vivamus adipiscing quam. Eget dui quis etiam sed eget sed est.
+                  </p>
+                  <div class="responsive-container-block person">
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
+                      <img class="profile-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors1.svg">
+                    </div>
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block">
+                      <p class="text-blk name">
+                        Jane Doe
+                      </p>
+                      <p class="text-blk desig">
+                        CEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content">
+                  <p class="text-blk info-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus elementum magna ut duis pulvinar tincidunt vivamus adipiscing quam. Eget dui quis etiam sed eget sed est.
+                  </p>
+                  <div class="responsive-container-block person">
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
+                      <img class="profile-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors1.svg">
+                    </div>
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block">
+                      <p class="text-blk name">
+                        Jane Doe
+                      </p>
+                      <p class="text-blk desig">
+                        CEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-1 wk-tab-1 wk-mobile-1 wk-ipadp-1 content bottom">
+                  <p class="text-blk info-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus elementum magna ut duis pulvinar tincidunt vivamus adipiscing quam. Eget dui quis etiam sed eget sed est.
+                  </p>
+                  <div class="responsive-container-block person">
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 icon-block">
+                      <img class="profile-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors1.svg">
+                    </div>
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 text-block">
+                      <p class="text-blk name">
+                        Jane Doe
+                      </p>
+                      <p class="text-blk desig">
+                        CEO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+    </section>       
     <footer>
         <p>Made by Enrique Macias</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
