@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tus Intereses</title>
+    <link rel="stylesheet" href="styles/intereses.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logos/unnamed-removebg-preview.png" alt="Deezer Logo" class="logo">
+            <h1>Te damos la bienvenida</h1>
+            <p>¡Elige tus marcas más vendidas!</p>
+            <div class="search-bar-container">
+                <input type="text" placeholder="Buscar" class="search-bar">
+            </div>
+            <div class="genre-buttons">
+                <button class="genre-button">Coca-Cola</button>
+                <button class="genre-button">Fanta</button>
+                <button class="genre-button">Sprite</button>
+                <button class="genre-button">Fresca</button>
+                <button class="genre-button">Ciel agua</button>
+                <button class="genre-button">Manzana</button>
+                <button class="genre-button">Powerade moras</button>
+                <button class="genre-button">Powerade Frut</button>
+                <button class="genre-button">Del valle</button>
+                <button class="genre-button">Frutsi</button>
+            </div>
+        </header>
+        <main>
+            <div class="artist-grid">
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/ades.webp" alt="Coca Cola">
+                    <p>Ades</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/barista.webp" alt="Fanta">
+                    <p>Barista</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/bebere.jpeg" alt="Sprite">
+                    <p>Bebere</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/burn.webp" alt="Fresca">
+                    <p>Burn</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/black.webp" alt="Powerade Moras">
+                    <p>Cafe Blak</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/escapes2.avif" alt="Powerade Frut">
+                    <p>Cafe escapes</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/Ciel.jpeg" alt="Nuevo Producto">
+                    <p>Ciel</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/cinabon.webp" alt="Nuevo Producto">
+                    <p>Cinnabon</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/coca-cola.png.webp" alt="Nuevo Producto">
+                    <p>Coca Cola</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/del valle.webp" alt="Nuevo Producto">
+                    <p>Del valle</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/dvalle y nada.webp" alt="Nuevo Producto">
+                    <p>Dvalle y nada</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/Fanta.webp" alt="Nuevo Producto">
+                    <p>Fanta</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/flroida.webp" alt="Nuevo Producto">
+                    <p>Florida 7</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/Fresca.jpg.webp" alt="Nuevo Producto">
+                    <p>Fresca</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/Frutsi.jpg.webp" alt="Nuevo Producto">
+                    <p>Frutsi</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/fuze tea.webp" alt="Nuevo Producto">
+                    <p>Fuze tea</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/illy.webp" alt="Nuevo Producto">
+                    <p>Illy</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/joya.webp" alt="Nuevo Producto">
+                    <p>Joya</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/monster.webp" alt="Nuevo Producto">
+                    <p>Monster</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/powerademoras.webp" alt="Nuevo Producto">
+                    <p>Powerade</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/sidral.webp" alt="Nuevo Producto">
+                    <p>Sidral</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/Sprite.jpg" alt="Nuevo Producto">
+                    <p>Sprite</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/topo.webp" alt="Nuevo Producto">
+                    <p>Topo Chico</p>
+                </div>
+                <div class="artist" onclick="toggleSelection(this)">
+                    <img src="img/productos/valle fruit.jpeg" alt="Nuevo Producto">
+                    <p>Valle Fruit</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <button class="submit-button" disabled>Elige al menos 1 marca</button>
+        </footer>
+    </div>
+    <script src="intereses.js"></script>
+</body>
+</html>
